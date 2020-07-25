@@ -23,22 +23,50 @@
 			height: 100%;
 			background-color: #e0e0e0;
 		}
-		html {
-			margin: 0;
-			padding: 0;
-		}
-		body {
-			margin: 0;
-			color: #000000;
+		.container h1 {
 			text-align: center;
-			text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+		}
+		.container p {
+			text-align: justify;
 		}
 		</style>
 	</head>
 	<body>
 		<div class="container">
-		<h1>Matwey Kornilov's</h1>
-		<h2>homepage</h2>
+		<h1>Matwey Kornilov</h1>
+		<h2>Open Source</h2>
+		<h3>Highlighted projects</h3>
+
+		<h4><a href="https://github.com/matwey/pybeam">Pybeam</a> – BEAM file parse in Python</h4>
+<p>
+Why would one need to parse BEAM (Erlang virtual machine files) in Python language? The reason is called <a href="https://github.com/rpm-software-management/rpmlint">rpmlint</a>.
+This tool is employed by a vast majority of modern RPM-based Linux distros to ensure RPM packaging quality.
+When packaging application, written in Erlang, an ability to extract metadata from just compiled <tt>*.beam</tt> files may come in handy.
+As an example, <a href="https://github.com/matwey/pybeam">pybeam</a> is used <a href="https://github.com/openSUSE/rpmlint-checks/blob/master/ErlangCheck.py">to check <tt>debug_info</tt> presence at openSUSE</a>, or <a href="https://github.com/fedora-erlang/erlang-rpm-macros">to provide automatic RPM package dependency generation for Erlang at Red Hat</a>.
+</p>
+<p>
+Under the hood, <a href="https://github.com/matwey/pybeam">pybeam</a> heavily relies on <a href="https://construct.readthedocs.io/en/latest/">construct</a> — declarative binary parser. 
+</p>
+
+		<h4><a href="https://github.com/matwey/libopenvizsla">libopenvizsla</a> – OpenVizsla host software reimplementation</h4>
+<p>
+<a href="http://openvizsla.org">OpenVizsla</a> is an open hardware project aimed to provide USB debugging and sniffing tool.
+It consists of USB PHY connected to FPGA, equipped with FTDI chip to communicate with a host PC.
+Even though the Python-based host software is provided by the hardware project authors, <a href="https://github.com/matwey/libopenvizsla">libopenvizsla</a> provides an alternative plain C interface to communicate with the device.
+Later, Tomasz Moń implemented and contributed WireShark <a href="https://github.com/matwey/libopenvizsla/blob/master/tools/ovextcap/main.c">external cap based on the library</a>.
+The external cap makes it possible to capture USB frames and analyze them with WireShark dissectors.
+There is also <a href="https://github.com/matwey/libpcap/tree/openvizsla">a module for libpcap</a>, the famous packet capturing library used by tcpdump and WireShark.
+</p>
+
+		<h4><a href="https://github.com/matwey/fips3">Fips</a> – an OpenGL based FITS viewer</h4>
+<p>
+FITS is a legacy format for storing raw data obtained on astronomical telescopes.
+Even yet the format is forty years old, it is in heavy use in a modern astronomy world.
+Internally, it is like a numpy array dump format.
+So, <a href="https://github.com/matwey/fips3">Fips</a> project is about copying a FITS file as-is into the GPU memory and employing different dirty OpenGL hacks to show this memory as an image.
+Surprisingly, this approach has drawn the attention of astronomical software community.
+<a href="https://github.com/matwey/fips3">Fips</a> is a joined effort with my friend and colleague <a href="https://homb.it">Konstantin Malanchev</a>. 
+</p>
 		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
